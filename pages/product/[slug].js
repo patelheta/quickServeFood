@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { client, urlFor } from '../../lib/client';
-import { AiOutlineMinus, AiOutlinePlus, AiFillStar, AiOutlineStar } from 'react-icons/ai';
+import { AiOutlineMinusCircle, AiOutlinePlusCircle, AiFillStar, AiOutlineStar } from 'react-icons/ai';
 import { Product } from '../../components';
 import { useStateContext } from '../../context/StateContext';
 import Link from "next/link";
@@ -58,11 +58,11 @@ const ProductDetails = ({ product, products }) => {
             <p>{product?.details}</p>
             <p className='price'>${product?.price}</p>
             <div className='quantity'>
-              <h3>Quantity</h3>
+              <h3>Quantity :</h3>
               <p className='quantity-desc'>
-                <span className='minus' onClick={decQty}><AiOutlineMinus /></span>
+                <span className='minus' onClick={decQty}><AiOutlineMinusCircle /></span>
                 <span className='num'>{qty}</span>
-                <span className='plus' onClick={incQty}><AiOutlinePlus /></span>
+                <span className='plus' onClick={incQty}><AiOutlinePlusCircle /></span>
               </p>
             </div>
             <div className='buttons'>
