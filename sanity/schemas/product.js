@@ -10,12 +10,14 @@ export default {
       of: [{ type: 'image' }],
       options: {
         hotspot: true,
-      }
+      },
+      validation: (Rule) => Rule.required(),
     },
     {
       name: 'name',
       title: 'Name',
       type: 'string',
+      validation: (Rule) => Rule.required(),
     },
     {
       name: 'slug',
@@ -35,6 +37,7 @@ export default {
       name: 'details',
       title: 'Details',
       type: 'string',
+      validation: (Rule) => Rule.required().max(200),
     }
   ]
 };
