@@ -1,8 +1,8 @@
 import React, { useRef } from "react";
 import Link from "next/link";
 import {
-  AiOutlineMinus,
-  AiOutlinePlus,
+  AiOutlineMinusCircle,
+  AiOutlinePlusCircle,
   AiOutlineLeft,
   AiOutlineShopping,
   AiOutlineClose,
@@ -49,7 +49,7 @@ const Cart = () => {
     <div
       className="cart-wrapper"
       ref={cartRef}
-      onClick={() => setShowCart(false)}
+      // onClick={() => setShowCart(false)}
     >
       <div className="cart-container">
         <button
@@ -100,7 +100,7 @@ const Cart = () => {
                             toggleCartItemQuanitity(item._id, "dec")
                           }
                         >
-                          <AiOutlineMinus />
+                          <AiOutlineMinusCircle />
                         </span>
                         <span className="num" onClick="">
                           {item.quantity}
@@ -111,7 +111,7 @@ const Cart = () => {
                             toggleCartItemQuanitity(item._id, "inc")
                           }
                         >
-                          <AiOutlinePlus />
+                          <AiOutlinePlusCircle />
                         </span>
                       </p>
                     </div>
