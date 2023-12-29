@@ -624,7 +624,7 @@ span.text-red {
 
 @media screen and (max-width: 800px) {
   .hero-banner-container {
-    height: 40rem;
+    height: auto;
     padding: 20px;
   }
   .hero-banner-image {
@@ -679,7 +679,9 @@ span.text-red {
     z-index: 10000;
   }
   .desc {
-    bottom: 30px;
+    margin-top: 10px;
+    position: inherit;
+    width: 100%;
   }
   .product-detail-container {
     flex-wrap: wrap;

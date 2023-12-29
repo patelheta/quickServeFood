@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { client, urlFor } from '../../lib/client';
 import { AiOutlineMinusCircle, AiOutlinePlusCircle, AiFillStar, AiOutlineStar } from 'react-icons/ai';
 import { Product } from '../../components';
@@ -9,14 +9,17 @@ import { RiErrorWarningFill } from "react-icons/ri";
 const ProductDetails = ({ product, products }) => {
   // const { image, name, details, price } = product;
   const [index, setIndex] = useState(0);
-  const { decQty, incQty, qty, onAdd, setShowCart } = useStateContext();
+  const { decQty, incQty, qty, onAdd, setShowCart, setQty } = useStateContext();
+
+  useEffect(() => {
+    setQty(1);
+  }, [product]);
 
   const handleBuyNow = () => {
     onAdd(product, qty);
 
     setShowCart(true);
   };
-
 
   return (
     <div>
